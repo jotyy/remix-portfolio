@@ -1,12 +1,10 @@
-import { useColorModeValue } from '@chakra-ui/color-mode';
-import { useDisclosure } from '@chakra-ui/hooks';
-import Icon from '@chakra-ui/icon';
 import {
   Avatar,
   Box,
   Button,
   Flex,
   HStack,
+  Icon,
   IconButton,
   Link,
   Menu,
@@ -15,13 +13,14 @@ import {
   MenuList,
   Stack,
   Text,
+  useColorModeValue,
+  useDisclosure,
 } from '@chakra-ui/react';
 import { AiOutlineClose, AiTwotoneThunderbolt } from 'react-icons/ai';
 import { BiChevronDown } from 'react-icons/bi';
 import { BsBook, BsCheckCircle } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { useLocation, useRoutes } from 'react-router';
-import { Link as RemixLink } from 'remix';
+import { Link as RemixLink, useLocation } from 'remix';
 import { AccentPicker } from '../ui/Accent';
 import { ColorModeSwitcher } from '../ui/ColorModeSwitcher';
 import { useLinkColor } from '../ui/theme';

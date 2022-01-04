@@ -1,4 +1,4 @@
-import { SlideFade } from '@chakra-ui/transition';
+import { SlideFade } from '@chakra-ui/react';
 import { MotionBox } from './motion';
 
 const staggerVariants = {
@@ -84,11 +84,15 @@ export const item = {
   },
 };
 
-export const PageSlideFade = ({ children }) => {
+export interface ContainerProps {
+  children: React.ReactNode;
+}
+
+export const PageSlideFade = ({ children }: ContainerProps) => {
   return <SlideFade in>{children}</SlideFade>;
 };
 
-export const StaggerChildren = ({ children }) => {
+export const StaggerChildren = ({ children }: ContainerProps) => {
   return (
     <MotionBox
       animate={{
@@ -102,6 +106,6 @@ export const StaggerChildren = ({ children }) => {
   );
 };
 
-export const CardTransition = ({ children }) => {
+export const CardTransition = ({ children }: ContainerProps) => {
   return <MotionBox variants={variants}>{children}</MotionBox>;
 };
