@@ -1,14 +1,24 @@
 {
   "private": true,
-  "name": "remix-app-template",
+  "name": "my-portfolio",
   "author": "Jotyy <jotyy318@gmail.com>",
   "license": "MIT",
   "description": "A portfolio site made with Remix",
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "postinstall": "remix setup node",
-    "start": "remix-serve build"
+    "postinstall": "remix setup node & husky install",
+    "start": "remix-serve build",
+    "type-check": "tsc",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "commit": "cz"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js,jsx,tsx}": [
+      "npm run lint --fix",
+      "npm run format"
+    ]
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.3",
@@ -45,5 +55,10 @@
   "engines": {
     "node": ">=14"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
