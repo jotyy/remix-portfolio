@@ -23,12 +23,16 @@ import { MotionBox } from '~/components/ui/motion';
 import { container, PageSlideFade } from '~/components/ui/page-transitions';
 import PageLayout from '../components/layout/pageLayout';
 import { Skill } from 'types';
-import { useLoaderData } from 'remix';
+import { MetaFunction, useLoaderData } from 'remix';
 
 export const loader = () => {
   return {
     skills: skillsArray,
   };
+};
+
+export const meta: MetaFunction = () => {
+  return { title: `TechStack | Jotyy` };
 };
 
 const TechStack = () => {

@@ -60,22 +60,22 @@ const NavLink = (props: NavLinkProps) => {
   };
 
   return (
-    <RemixLink to={props.path}>
-      <Link
-        px={2}
-        py={1}
-        rounded={`md`}
-        _hover={{
-          textDecoration: `none`,
-          bg: link.bg,
-        }}
-        bg={location.pathname === props.path ? link.bg : `transparent`}
-        color={location.pathname === props.path ? link.color : `inherit`}
-        onClick={() => props.onClose()}
-      >
-        {props.name}
-      </Link>
-    </RemixLink>
+    <Link
+      px={2}
+      py={1}
+      as={RemixLink}
+      to={props.path}
+      rounded={`md`}
+      _hover={{
+        textDecoration: `none`,
+        bg: link.bg,
+      }}
+      bg={location.pathname === props.path ? link.bg : `transparent`}
+      color={location.pathname === props.path ? link.color : `inherit`}
+      onClick={() => props.onClose()}
+    >
+      {props.name}
+    </Link>
   );
 };
 
@@ -99,21 +99,19 @@ const MenuLink = (props: MenuLinkProps) => {
   };
 
   return (
-    <RemixLink to={props.path}>
-      <Link onClick={() => props.onClose}>
-        <MenuItem
-          color={props.rPath === props.path ? props.color : undefined}
-          bg={props.rPath === props.path ? props.bg : undefined}
-        >
-          <HStack>
-            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-            {/* @ts-ignore:next-line */}
-            {iconsObj[props.path]}
-            <Text>{props.name}</Text>
-          </HStack>
-        </MenuItem>
-      </Link>
-    </RemixLink>
+    <Link as={RemixLink} to={props.path} onClick={() => props.onClose}>
+      <MenuItem
+        color={props.rPath === props.path ? props.color : undefined}
+        bg={props.rPath === props.path ? props.bg : undefined}
+      >
+        <HStack>
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/* @ts-ignore:next-line */}
+          {iconsObj[props.path]}
+          <Text>{props.name}</Text>
+        </HStack>
+      </MenuItem>
+    </Link>
   );
 };
 
@@ -158,6 +156,7 @@ export default function TopNav() {
                 <Avatar
                   as={Link}
                   size={`sm`}
+                  alt="avatar"
                   src={`https://avatars.githubusercontent.com/u/30037764?v=4`}
                 />
               </RemixLink>

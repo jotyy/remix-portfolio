@@ -14,7 +14,7 @@ import { AnimatePresence } from 'framer-motion';
 import { theme } from '~/components/ui/theme';
 
 export const meta: MetaFunction = () => {
-  return { title: `Jotyy's Portfolio` };
+  return { title: `Jotyy - FullStack Developer` };
 };
 
 export default function App() {

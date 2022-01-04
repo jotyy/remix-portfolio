@@ -21,7 +21,7 @@ import { companies, institutes } from '~/data/data';
 import Header from '~/components/layout/header';
 import PageLayout from '~/components/layout/pageLayout';
 import { Tags } from '~/components/ui/Tags';
-import { useLoaderData } from 'remix';
+import { MetaFunction, useLoaderData } from 'remix';
 import { Company, Institute } from 'types';
 
 interface CardProps {
@@ -208,6 +208,10 @@ const About = () => {
       </PageSlideFade>
     </PageLayout>
   );
+};
+
+export const meta: MetaFunction = () => {
+  return { title: `About | Jotyy` };
 };
 
 export default About;

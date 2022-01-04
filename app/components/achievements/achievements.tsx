@@ -6,7 +6,7 @@ import {
   FiEdit2,
   FiHome,
   FiPackage,
-  FiUsers
+  FiUsers,
 } from 'react-icons/fi';
 import { GiLovers } from 'react-icons/gi';
 import { Link as RemixLink } from 'remix';
@@ -28,11 +28,9 @@ const ExternalLink: FC<ExternalLinkProps> = ({
   ...props
 }) => {
   return (
-    <RemixLink to={url}>
-      <Link {...linkProps} {...props}>
-        {text}
-      </Link>
-    </RemixLink>
+    <Link href={url} isExternal {...linkProps} {...props}>
+      {text}
+    </Link>
   );
 };
 
@@ -43,11 +41,9 @@ const InternalLink: React.FC<ExternalLinkProps> = ({
   ...props
 }) => {
   return (
-    <RemixLink to={url}>
-      <Link {...linkProps} {...props}>
-        {text}
-      </Link>
-    </RemixLink>
+    <Link as={RemixLink} to={url} {...linkProps} {...props}>
+      {text}
+    </Link>
   );
 };
 
@@ -69,7 +65,7 @@ const Achievements = () => {
           <Box>
             <TimelineItem icon={FaTools}>
               Refactor this website using{` `}
-              <InternalLink
+              <ExternalLink
                 color={linkColor}
                 url="https://remix.run/"
                 text={`Remix`}
@@ -116,7 +112,7 @@ const Achievements = () => {
               Built my portfolio website with React and ChakraUI,{` `}
               <ExternalLink
                 color={linkColor}
-                url="https://github.com/jotyy/portfolio"
+                url="https://github.com/jotyy/my-portfolio"
                 text={`source on Github`}
                 target="_blank"
               />
