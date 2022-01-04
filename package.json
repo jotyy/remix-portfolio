@@ -28,6 +28,7 @@
     "@emotion/styled": "^11.6.0",
     "@remix-run/react": "^1.1.1",
     "@remix-run/serve": "^1.1.1",
+    "@remix-run/vercel": "^1.1.1",
     "framer-motion": "^5.5.5",
     "mitt": "^3.0.0",
     "react": "^17.0.2",
