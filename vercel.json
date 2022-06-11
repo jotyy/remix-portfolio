@@ -5,6 +5,8 @@
     }
   },
   "functions": {
-    "includeFiles": "posts/*.mdx"
+    "app/models/blog.server.ts": {
+      "includeFiles": "posts/*.mdx"
+    }
   }
 }
