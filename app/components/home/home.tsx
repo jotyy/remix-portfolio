@@ -83,7 +83,7 @@ const Home: React.FC<HomeProps> = ({ projects }) => {
             </Box>
             {` `}
             <Box as="span" whiteSpace="nowrap">
-              an blockchain lover&nbsp;
+              a blockchain lover&nbsp;
             </Box>
             from{` `}
             <Box as="span" whiteSpace="nowrap">

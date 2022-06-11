@@ -1,8 +1,8 @@
-import { MetaFunction } from 'remix';
+import { MetaFunction } from '@remix-run/node';
 import Achievements from '~/components/achievements/achievements';
 import PageLayout from '~/components/layout/pageLayout';
 
-const Index = () => {
+const Archievement = () => {
   return (
     <PageLayout title="Achievements" keywords="My achievements">
       <Achievements />
@@ -14,4 +14,4 @@ export const meta: MetaFunction = () => {
   return { title: `Achivements | Jotyy` };
 };
 
-export default Index;
+export default Archievement;

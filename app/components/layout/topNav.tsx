@@ -27,13 +27,13 @@ import { useLinkColor } from '../ui/theme';
 
 const webLinks = [
   { name: `About`, path: `/about` },
-  // { name: `Blog`, path: `/blog` },
+  { name: `Blog`, path: `/blog` },
 ];
 
 const mobileLinks = [
   { name: `About`, path: `/about` },
   // { name: `Open Source`, path: `/open-source` },
-  // { name: `Blog`, path: `/blog` },
+  { name: `Blog`, path: `/blog` },
   { name: `Tech Stack`, path: `/tech-stack` },
   { name: `Achievements`, path: `/achievements` },
 ];
