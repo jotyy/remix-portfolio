@@ -1,11 +1,6 @@
 {
-  "build": {
-    "env": {
-      "ENABLE_FILE_SYSTEM_API": "1"
-    }
-  },
   "functions": {
-    "app/models/blog.server.ts": {
+    "api/index.js": {
       "includeFiles": "posts/*.mdx"
     }
   }
