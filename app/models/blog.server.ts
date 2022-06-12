@@ -13,7 +13,7 @@ export type Post = {
   category: string;
 };
 
-const postsDirectory = path.join(__dirname, '../..', 'posts');
+const postsDirectory = path.join(__dirname, 'posts');
 
 export function getSortedPostsData() {
   // Get file names under /posts
