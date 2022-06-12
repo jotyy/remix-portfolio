@@ -104,3 +104,13 @@ export interface BlogPost {
   last_comment_at: string;
   body_html: string;
 }
+
+export type Post = {
+  slug: string;
+  title: string;
+  description: string;
+  published_at: string;
+  contentHtml?: string;
+  tags: string[];
+  category: string;
+};

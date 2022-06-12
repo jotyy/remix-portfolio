@@ -7,10 +7,14 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { MetaFunction } from '@remix-run/react/routeModules';
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
-import { json, Link, useLoaderData } from 'remix';
+import { json, useLoaderData } from 'remix';
+import { Post } from 'types';
+import PostCard from '~/components/blog/card';
 import Header from '~/components/layout/header';
 import PageLayout from '~/components/layout/pageLayout';
 import { MotionBox } from '~/components/ui/motion';
@@ -18,18 +22,26 @@ import {
   PageSlideFade,
   StaggerChildren,
 } from '~/components/ui/page-transitions';
-import { getSortedPostsData, Post } from '~/models/blog.server';
+import * as helloMdx from './hello.mdx';
 
 const TURQUOSISE = '#06b6d4';
+
+dayjs.extend(localizedFormat);
+
+function postFromModule(mod: any) {
+  return {
+    slug: mod.filename.replace(/\.mdx?$/, ''),
+    ...mod.attributes,
+  };
+}
 
 type LoaderData = {
   posts: Post[];
 };
 
 export const loader = () => {
-  const allPosts = getSortedPostsData();
   return json<LoaderData>({
-    posts: allPosts,
+    posts: [postFromModule(helloMdx)],
   });
 };
 
@@ -81,7 +93,7 @@ const Blog = () => {
                   key={post.slug}
                 >
                   <MotionBox whileHover={{ y: -5 }} key={i}>
-                    <Link to={post.slug}>{post.title}</Link>
+                    <PostCard post={post} />
                   </MotionBox>
                 </motion.div>
               ))}
