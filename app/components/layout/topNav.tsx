@@ -128,7 +128,9 @@ export default function TopNav() {
   return (
     <>
       <Box
-        bg={useColorModeValue(`white`, `gray.700`)}
+        bg={useColorModeValue(`whiteAlpha.400`, `grayAlpha.700`)}
+        backdropFilter="auto"
+        backdropBlur="10px"
         px={4}
         boxShadow={`lg`}
         position="fixed"

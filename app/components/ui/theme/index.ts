@@ -15,6 +15,11 @@ export const extendedTheme = extendTheme({
       body: {
         color: mode(`gray.700`, `whiteAlpha.900`)(props),
         bg: mode(`gray.50`, `gray.900`)(props),
+        bgImage: mode(
+          'linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)',
+          'none',
+        )(props),
+        bgRepeat: 'no-repeat',
         fontSize: `1.2em`,
         '.deleted': {
           color: `#ff8383 !important`,
