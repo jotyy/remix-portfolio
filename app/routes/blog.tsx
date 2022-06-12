@@ -1,4 +1,5 @@
 import {
+  Heading,
   Icon,
   Input,
   InputGroup,
@@ -12,7 +13,7 @@ import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
-import { json, useLoaderData } from 'remix';
+import { json } from '@remix-run/node';
 import { Post } from 'types';
 import PostCard from '~/components/blog/card';
 import Header from '~/components/layout/header';
@@ -22,7 +23,8 @@ import {
   PageSlideFade,
   StaggerChildren,
 } from '~/components/ui/page-transitions';
-import * as helloMdx from './hello.mdx';
+import * as helloMdx from './posts/hello-world.mdx';
+import { useLoaderData } from '@remix-run/react';
 
 const TURQUOSISE = '#06b6d4';
 
@@ -56,9 +58,11 @@ const Blog = () => {
   return (
     <PageLayout title="Blog">
       <PageSlideFade>
-        <Header underlineColor={TURQUOSISE} mt={0} mb={6}>
-          Featured Articles
-        </Header>
+        <Heading>
+          <Header underlineColor={TURQUOSISE} mt={0} mb={6}>
+            Featured Articles
+          </Header>
+        </Heading>
         <InputGroup maxW="30rem">
           <Input
             placeholder="Search articles"

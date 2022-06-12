@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import dayjs from 'dayjs';
 import React from 'react';
-import { Link } from 'remix';
+import { Link } from '@remix-run/react';
 import { Post } from 'types';
 import { CardTransition } from '../ui/page-transitions';
 import { Tags } from '../ui/Tags';
@@ -33,7 +33,7 @@ const PostCard: React.FC<IProps> = ({ post }) => {
         align="left"
       >
         <Heading fontSize="lg">
-          <Link to={post.slug}>
+          <Link to={`/posts/${post.slug}`}>
             <Text color={linkColor}>{post.title}</Text>
           </Link>
         </Heading>

@@ -1,25 +1,23 @@
 import {
+  Box,
   HStack,
-  VStack,
+  Image,
+  Link,
   Text,
   useColorModeValue,
-  Box,
-  Link,
-  Image,
-  Skeleton,
+  VStack,
 } from '@chakra-ui/react';
+import { Skill } from 'types';
+import { useLinkColor } from '~/components/ui/theme';
 import { MotionBox } from '../ui/motion';
 import { item } from '../ui/page-transitions';
-import { Link as RemixLink } from 'remix';
-import { useLinkColor } from '~/components/ui/theme';
-import { Skill } from 'types';
 
 const SkillCard = ({ name, image, link, description }: Skill) => {
   const linkColor = useLinkColor();
   return (
     <MotionBox variants={item}>
       <MotionBox whileHover={{ y: -5 }}>
-        <Link as={RemixLink} to={link ?? `/`} isExternal>
+        <Link href={link ?? `/`} isExternal>
           <HStack
             p={4}
             bg={useColorModeValue(`white`, `gray.800`)}
@@ -48,14 +46,7 @@ const SkillCard = ({ name, image, link, description }: Skill) => {
                 right={0}
                 opacity={0.25}
               ></Box>
-              <Image
-                src={image}
-                height={26}
-                width={26}
-                layout="fixed"
-                rounded="md"
-                alt=""
-              />
+              <Image src={image} height={26} width={26} rounded="md" alt="" />
             </Box>
             <VStack
               align="start"

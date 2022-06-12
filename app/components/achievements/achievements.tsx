@@ -9,7 +9,7 @@ import {
   FiUsers,
 } from 'react-icons/fi';
 import { GiLovers } from 'react-icons/gi';
-import { Link as RemixLink } from 'remix';
+import { Link as RemixLink } from '@remix-run/react';
 import Header from '~/components/layout/header';
 import { PageSlideFade } from '~/components/ui/page-transitions';
 import { useLinkColor } from '~/components/ui/theme';

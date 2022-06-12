@@ -20,8 +20,9 @@ import { MotionBox } from '~/components/ui/motion';
 import { companies, institutes } from '~/data/data';
 import Header from '~/components/layout/header';
 import PageLayout from '~/components/layout/pageLayout';
+import { MetaFunction } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
 import { Tags } from '~/components/ui/Tags';
-import { MetaFunction, useLoaderData } from 'remix';
 import { Company, Institute } from 'types';
 
 interface CardProps {

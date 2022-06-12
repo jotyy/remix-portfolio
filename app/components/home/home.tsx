@@ -12,7 +12,7 @@ import {
 import React from 'react';
 import Header from '../layout/header';
 import { MotionBox, MotionFlex } from '../ui/motion';
-import { Link as RemixLink } from 'remix';
+import { Link as RemixLink } from '@remix-run/react';
 import { useLinkColor } from '../ui/theme';
 import Projects from './projects';
 import { Project } from 'types';

@@ -23,7 +23,8 @@ import { MotionBox } from '~/components/ui/motion';
 import { container, PageSlideFade } from '~/components/ui/page-transitions';
 import PageLayout from '../components/layout/pageLayout';
 import { Skill } from 'types';
-import { MetaFunction, useLoaderData } from 'remix';
+import { MetaFunction } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
 
 export const loader = () => {
   return {
@@ -44,7 +45,8 @@ const TechStack = () => {
   }, [skills]);
 
   const filterSkills = (tab: string) => {
-    if (tab.length) setSkillsList(skills.filter((skill: Skill) => skill.type === tab));
+    if (tab.length)
+      setSkillsList(skills.filter((skill: Skill) => skill.type === tab));
     else setSkillsList(skills);
   };
 
