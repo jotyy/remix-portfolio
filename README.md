@@ -1,6 +1,13 @@
-# Welcome to Remix!
 
-- [Remix Docs](https://remix.run/docs)
+# Remix Portfolio
+
+A personal portfolio build with remix, chakra-ui, etc..
+
+![GitHub](https://img.shields.io/github/license/jotyy/remix-portfolio?style=for-the-badge)
+![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fjotyy.site)
+## Demo
+
+- [jotyy.site](https://jotyy.site)
 
 ## Deployment
 
@@ -14,6 +21,9 @@ vercel
 ```
 
 It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
+## Authors
+
+- [@Joshua Lee](https://www.github.com/jotyy)
 
 ## Development
 
