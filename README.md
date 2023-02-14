@@ -7,7 +7,7 @@ A personal portfolio build with remix, chakra-ui, etc..
 ![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fjotyy.site)
 ## Demo
 
-- [jotyy.site](https://jotyy.site)
+- [jotyy.vercel.app](https://jotyy.vercel.app)
 
 ## Deployment
 
