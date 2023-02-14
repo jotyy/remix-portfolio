@@ -4,7 +4,7 @@
 A personal portfolio build with remix, chakra-ui, etc..
 
 ![GitHub](https://img.shields.io/github/license/jotyy/remix-portfolio?style=for-the-badge)
-![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fjotyy.site)
+![Website](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fjotyy.vercel.app)
 ## Demo
 
 - [jotyy.vercel.app](https://jotyy.vercel.app)
